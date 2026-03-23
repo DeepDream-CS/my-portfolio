@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Jiaqi Chen</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 针对简历页面的专属样式 */
+        .resume-viewer {
+            width: 100%;
+            height: 1100px; /* 足够长以容纳标准 A4 页面 */
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin: 30px 0;
+        }
+        .resume-section {
+            margin-bottom: 40px;
+        }
+        .resume-section h3 {
+            color: var(--accent-color);
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .download-bar {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="project-page-container">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        
+        <h1>Jiaqi Chen</h1>
+        <p style="text-align: center; color: #7F8C8D;">Level & Systems Designer | West Lafayette, IN</p>
+
+        <div class="download-bar">
+            <p>Preferred for printing or offline reading:</p>
+            <a href="Resume_Jiaqi Chen.pdf" download class="btn" style="margin-top: 10px;">Download PDF Resume</a>
+        </div>
+
+        <h2>Resume Preview</h2>
+        <embed src="Resume_Jiaqi Chen.pdf" type="application/pdf" class="resume-viewer" />
+
+        <div class="resume-content" style="margin-top: 60px;">
+            <h2>Experience Summary</h2>
+            
+            <div class="resume-section">
+                <h3>Education</h3>
+                <p><strong>Purdue University</strong> | West Lafayette, IN</p>
+                <p>Bachelor of Science – Computer Graphic Technology (Expected May 2026)</p>
+                <p>GPA: 3.2/4.0 | Minor: Computer Information Technology</p>
+            </div>
+
+            <div class="resume-section">
+                <h3>Work Experience</h3>
+                <p><strong>Game DLC Translator</strong> | Weather Factory (Remote)</p>
+                <p><em>Nov 2024 – Present</em></p>
+                <ul style="margin-left: 20px;">
+                    <li>Localize Chinese DLC content with cultural accuracy and consistency.</li>
+                    <li>Collaborate with developers to maintain text quality; raised Chinese player feedback from 54% to 90% positive.</li>
+                </ul>
+            </div>
+
+            <div class="resume-section">
+                <h3>Technical Proficiencies</h3>
+                <p><strong>Software:</strong> Maya, Unreal Engine 5, Unity</p>
+                <p><strong>Programming:</strong> C#, Java, Python</p>
+                <p><strong>Languages:</strong> English, Chinese (Native)</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Jiaqi Chen | <a href="mailto:jacky.deepdream@gmail.com">jacky.deepdream@gmail.com</a></p>
+    </footer>
+
+</body>
+</html>

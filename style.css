@@ -1,0 +1,345 @@
+/* ================================================== */
+/* --- 1. 基础设置与配色 (深邃青 & 柔和金) --- */
+/* ================================================== */
+:root {
+    --bg-color: #F8F5F2;      /* 柔和偏暖的背景 */
+    --text-color: #2C3E50;    /* 高级深蓝灰文字 */
+    --accent-color: #16A085;  /* 深邃青 (主链接/按钮) */
+    --accent-secondary: #F39C12; /* 柔和金 (悬浮点缀) */
+    --card-bg: #FFFFFF;        /* 纯白卡片背景 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 0 20px;
+    scroll-behavior: smooth;
+}
+
+/* ================================================== */
+/* --- 2. 导航栏 (Nav) --- */
+/* ================================================== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color); 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-secondary); 
+}
+
+/* ================================================== */
+/* --- 3. 头部自我介绍 (Header) --- */
+/* ================================================== */
+header {
+    text-align: center;
+    padding: 80px 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    color: #7F8C8D; 
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* ================================================== */
+/* --- 4. 通用按钮与链接 (Buttons) --- */
+/* ================================================== */
+.btn, .details-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color); 
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    text-align: center;
+}
+
+.btn:hover, .details-btn:hover {
+    background-color: #1abc9c; /* 悬浮时变亮 */
+    transform: translateY(-2px); /* 轻微上浮 */
+}
+
+/* ================================================== */
+/* --- 5. 主页展示区块 (Grid Layout) --- */
+/* ================================================== */
+#projects, #gamejams, #ttrpg {
+    max-width: 1000px;
+    margin: 0 auto 80px auto;
+}
+
+#projects h2, #gamejams h2, #ttrpg h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
+}
+
+.project-grid {
+    display: grid;
+    /* 自动适应屏幕宽度，最小 300px 一列 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* ================================================== */
+/* --- 6. 单个项目卡片 (Cards) --- */
+/* ================================================== */
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
+}
+
+/* 卡片里的封面图 */
+.project-cover {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: block;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 20px;
+    flex-grow: 1; /* 让文字部分撑满，把按钮挤到最下 */
+}
+
+/* ================================================== */
+/* --- 7. 技能展示区 (Skills Container) --- */
+/* ================================================== */
+#skills {
+    max-width: 1000px;
+    margin: 0 auto 80px auto;
+}
+
+#skills h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
+}
+
+.skills-container {
+    background-color: var(--card-bg);
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.skills-container p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* ================================================== */
+/* --- 8. 页脚 (Footer) --- */
+/* ================================================== */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid #eaeaea;
+    color: #7F8C8D;
+}
+
+/* ================================================== */
+/* --- 9. 独立项目详情页 (Project Details Page) --- */
+/* ================================================== */
+.project-page-container {
+    max-width: 800px; /* 适合阅读的窄版排版，也是白框的总宽度 */
+    margin: 40px auto;
+    background-color: var(--card-bg);
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden; /* 防止任何东西意外溢出白框 */
+}
+
+/* ================================================== */
+/* ✨ 核心修改点：文字和标题缩窄，留给图片/视频 100% 宽度 ✨ */
+/* ================================================== */
+.project-page-container h1,
+.project-page-container h2,
+.project-page-container p,
+.project-meta,
+.img-caption,
+.back-link {
+    max-width: 700px; /* 文字最宽只有 700px */
+    margin-left: auto; /* 居中文字 */
+    margin-right: auto; /* 居中文字 */
+}
+
+.project-meta p, .img-caption, .project-page-container p {
+    /* 恢复内部文字对齐方式 */
+    margin-left: initial;
+    margin-right: initial;
+    /* max-width 重写以确保内部也遵循 */
+    max-width: initial;
+}
+
+/* 如果是文字段落或 meta bar，本身也要加上 auto 居中 */
+.project-meta, .img-caption, .project-page-container p, .back-link, .project-page-container h2 {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 职位与工具信息栏 */
+.project-meta {
+    color: #7F8C8D;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eaeaea;
+    display: flex; /* 让 meta 信息在一行对齐 */
+    justify-content: center;
+    gap: 40px;
+}
+
+.project-page-container h2 {
+    font-size: 1.8rem;
+    margin: 40px auto 20px auto; /* 顶部/底部 margin，左右 auto 居中 */
+    color: var(--accent-color);
+}
+
+.project-page-container p {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+    text-align: center;
+    width: 100%; /* 确保 back-link 作为 700px 宽度的容器正确居中 */
+}
+
+.back-link:hover {
+    color: var(--accent-secondary);
+}
+
+.project-page-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* 详情页内展示能力的大图 - ✨ 保持在白框内 100% 宽度 ✨ */
+.showcase-img {
+    width: 100%; /* 占满白框的 100% 宽度 (800px) */
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0 10px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* 图片下方的注释 (图注) - ✨ 文字区域 (700px) 内居中 ✨ */
+.img-caption {
+    font-size: 0.9rem;
+    color: #7F8C8D;
+    text-align: center;
+    margin-bottom: 40px;
+    font-style: italic;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ================================================== */
+/* --- 10. 视频播放器 (YouTube Embed ✨ 已修复溢出问题 ✨) --- */
+/* ================================================== */
+.video-container {
+    position: relative;
+    /* ✨ 核心修改：宽度设置为白框的 100% (800px) ✨ */
+    width: 100%; 
+    /* ✨ 核心修改：删除原本的向左 margin 偏移 ✨ */
+    margin-left: 0; 
+    /* 现代 CSS 魔法：锁定 16:9 比例 */
+    aspect-ratio: 16 / 9; 
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border-radius: 12px;
+    overflow: hidden;
+    /* 柔和的阴影，不喧宾夺主 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+    background-color: #222; /* 视频未加载时的底色 */
+}
+
+/* 视频 iframe 占满容器 */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}

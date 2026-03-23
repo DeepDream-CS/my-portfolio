@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The White Wolf | Jiaqi Chen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="project-page-container">
+        
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+        <h1>The White Wolf</h1>
+        <div class="project-meta">
+            <p><strong>Role:</strong> Game Design & Blueprint Scripting</p>
+            <p><strong>Tools Used:</strong> Unreal Engine (JRPG Template)</p>
+        </div>
+
+        <h2>Project Overview</h2>
+        <p>The White Wolf is a short narrative-driven RPG that explores moral choices and consequences in a medieval fantasy world. Players take on the role of a lone traveler who arrives at an isolated village plagued by attacks from a mysterious white wolf. The game challenges players to make decisions that influence multiple branching outcomes: will they eliminate the threat through combat, attempt to coexist, or discover a hidden path to peaceful resolution?</p>
+
+        <h2>My Contributions</h2>
+        <p>This project was built independently using a school-provided JRPG template. I was responsible for all aspects of the game design and blueprint scripting, including:</p>
+        <ul style="margin-left: 20px; margin-bottom: 20px;">
+            <li>Designing the village and forest exploration areas</li>
+            <li>Scripting multi-path quests with interactive puzzles</li>
+            <li>Balancing the turn-based combat system and boss behaviors</li>
+        </ul>
+        <p>My focus was on delivering an engaging player experience where exploration, narrative, and combat choices are closely intertwined to offer multiple endings and replayability.</p>
+
+        <h2>Multiple Ending System Logic</h2>
+        <p>This screenshot shows the flowchart for the branching narrative. It starts with the player getting the main quest. Depending on whether they fully explore the forest and find a key item, or simply rush to face the final boss, the system directs them to one of three balanced and impactful endings (True Ending, Defeat Ending, or Early Leave Ending).</p>
+        
+        <img src="images/TheWhiteWolf_MissionLogic.png" alt="Mission Logic Flowchart" class="showcase-img">
+        <p class="img-caption">Fig 1: Multiple Ending System Flowchart.</p>
+
+        <p>One of the coolest parts of The White Wolf is its multiple ending system. Players can make different choices that lead to three possible outcomes. I designed this system to reward players who are curious and like to explore everything the game world has to offer.</p>
+
+
+        <h2>Quest Progression Blueprint Logic</h2>
+        <p>To control the quest progression and player choices, I created custom Blueprint logic. This screenshot shows the interaction between player actions, quest conditions, and global game state to ensure a clean, stable, and reactive experience.</p>
+        
+        <img src="images/TheWhiteWolf_BluePrintShowCase.png" alt="Blueprint Logic Showcase" class="showcase-img">
+        <p class="img-caption">Fig 2: Custom Blueprint logic for quest and choice management.</p>
+        
+        <p>For The White Wolf, I also created custom Blueprint logic to control quest progression and player choices. I used Sequence and Branch nodes to manage the flow, and referenced global game state to track player progress across different levels. This setup allowed me to build a multiple ending system that responds to the player's choices in real time.</p>
+
+
+        <h2>Full Game Map Design</h2>
+        <p>This screenshot shows the final map layout, divided into two main zones: the village and the forest.</p>
+        
+        <img src="images/TheWhiteWolf_MapShowCase.png" alt="Map Layout Showcase" class="showcase-img">
+        <p class="img-caption">Fig 3: Top-down map overview of the village and forest areas.</p>
+
+        <p>I designed the full game map for The White Wolf, dividing it into two main zones: the village and the forest. The village acts as a safe zone, where players can talk to NPCs and prepare for the journey. The village is compact and walled off, creating a sense of protection and community. Outside the village lies the forest, the game's primary exploration and danger zone. I carefully designed the map to guide players naturally from safe to risky areas, balancing storytelling and gameplay flow.</p>
+
+    </div> <footer>
+        <p>© 2026 Jiaqi Chen</p>
+    </footer>
+
+</body>
+</html>
