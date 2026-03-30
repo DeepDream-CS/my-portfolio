@@ -5,6 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jiaqi Chen | Level & Systems Designer</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* 针对精选区域的额外小样式，突出重点 */
+        .featured-section {
+            background-color: #f4f7f6; /* 轻微的背景色区分 */
+            padding: 80px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .featured-card {
+            background: white;
+            border: 2px solid var(--accent-color); /* 用主色调边框强调 */
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .featured-card:hover {
+            transform: translateY(-10px);
+        }
+        .featured-badge {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 5px 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
 
@@ -12,10 +51,12 @@
         <div class="logo">Jiaqi Chen</div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
+            <li><a href="#featured">Featured</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#gamejams">Game Jams</a></li>
             <li><a href="#ttrpg">TTRPG</a></li>
-            <li><a href="resume.html">Resume</a></li> <li><a href="#skills">Skills</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="#skills">Skills</a></li>
         </ul>
     </nav>
 
@@ -25,75 +66,88 @@
         <p>Senior at Purdue University majoring in Computer Graphics Technology. I specialize in crafting engaging mechanics, immersive levels, and robust system frameworks using Unreal Engine 5 and Unity.</p>
         
         <div style="display: flex; gap: 15px; justify-content: center; margin-top: 30px;">
-            <a href="#projects" class="btn">View My Work</a>
+            <a href="#featured" class="btn">View My Work</a>
             <a href="resume.html" class="btn" style="background-color: transparent; border: 2px solid var(--accent-color); color: var(--accent-color);">View Resume</a>
         </div>
     </header>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
+    <section id="featured" class="featured-section">
+        <h2 style="text-align: center; margin-bottom: 40px;">⭐ Featured Works</h2>
+        <div class="featured-grid">
             
+            <div class="featured-card" style="position: relative;">
+                <span class="featured-badge">Top Pick</span>
+                <img src="images/ToHeaven_CoverPage.png" alt="Squatter’s Rights to Heaven" class="project-cover">
+                <div style="padding: 25px;">
+                    <h3>Squatter’s Rights to Heaven</h3>
+                    <p>Strategy Tower Defense. Developed the level design pipeline and implemented the core Main Menu UI logic. Focused on spatial strategy and synergy mechanics.</p>
+                    <a href="project-squatter.html" class="details-btn">View Detailed Design</a>
+                </div>
+            </div>
+
+            <div class="featured-card" style="position: relative;">
+                <span class="featured-badge">System Design</span>
+                <img src="images/HellBinder_CoverPage.png" alt="Hell Binder" class="project-cover">
+                <div style="padding: 25px;">
+                    <h3>Hell Binder</h3>
+                    <p>TCG appraisal puzzle. Combines "Papers, Please" inspection with deep trading card game mechanics and value-based decision making.</p>
+                    <a href="project-hellbinder.html" class="details-btn">View Detailed Design</a>
+                </div>
+            </div>
+
+            <div class="featured-card" style="position: relative;">
+                <span class="featured-badge">Puzzle Design</span>
+                <img src="images/DepthFirst_CoverPage.png" alt="Depth First" class="project-cover">
+                <div style="padding: 25px;">
+                    <h3>Depth First!</h3>
+                    <p>Algorithm-inspired puzzle game. Designed levels with multiple solution paths based on search mechanics and recursive logic.</p>
+                    <a href="project-depthfirst.html" class="details-btn">View Detailed Design</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>More Projects</h2>
+        <div class="project-grid">
             <div class="project-card">
                 <img src="images/2100YAH_CoverPage.png" alt="2100 YAH" class="project-cover">
                 <h3>2100 YAH</h3>
-                <p>A story-focused action game. As a Map Editor, I redesigned environments and lighting to enhance the immersive post-human atmosphere.</p>
+                <p>Story-focused action game. Redesigned environments and lighting as a Map Editor to enhance post-human atmosphere.</p>
                 <a href="project-2100yah.html" class="details-btn">Read Full Details</a>
             </div>
 
             <div class="project-card">
                 <img src="images/TheWhiteWolf_CoverPage.png" alt="The White Wolf" class="project-cover">
                 <h3>The White Wolf</h3>
-                <p>A JRPG exploring moral choices. I designed the multiple ending system and scripted the quest progression using custom Blueprints.</p>
+                <p>A JRPG exploring moral consequences. Designed a branching narrative system with three unique endings.</p>
                 <a href="project-whitewolf.html" class="details-btn">Read Full Details</a>
-            </div>
-
-            <div class="project-card">
-                <img src="images/ToHeaven_CoverPage.png" alt="Squatter’s Rights to Heaven" class="project-cover">
-                <h3>Squatter’s Rights to Heaven</h3>
-                <p>A strategy tower defense game. I developed the level design pipeline and implemented the interactive Main Menu UI logic.</p>
-                <a href="project-squatter.html" class="details-btn">Read Full Details</a>
             </div>
 
             <div class="project-card">
                 <img src="images/Purrvivor_CoverPage.png" alt="Purrvivor" class="project-cover">
                 <h3>Purrvivor</h3>
-                <p>An arcade-style survivor game. I architected a massive city arena divided into five distinct tactical combat sectors.</p>
+                <p>Top-down survivor game. Architected a massive city arena divided into distinct tactical combat sectors.</p>
                 <a href="project-purrvivor.html" class="details-btn">Read Full Details</a>
             </div>
-
         </div>
     </section>
 
     <section id="gamejams">
         <h2>Game Jams</h2>
         <div class="project-grid">
-            
             <div class="project-card">
                 <img src="images/CrowdiNO_CoverPage.png" alt="CrowdiNO" class="project-cover">
                 <h3>CrowdiNO</h3>
-                <p>A social anxiety simulator. Features a unique "distance management" mechanic where proximity to NPCs increases player stress.</p>
+                <p>Social anxiety simulator. A unique "distance management" mechanic where strangers' proximity builds stress.</p>
                 <a href="project-crowdino.html" class="details-btn">Read Full Details</a>
-            </div>
-
-            <div class="project-card">
-                <img src="images/HellBinder_CoverPage.png" alt="Hell Binder" class="project-cover">
-                <h3>Hell Binder</h3>
-                <p>A TCG appraisal puzzle. Combines "Papers, Please" inspection mechanics with deep trading card game system design.</p>
-                <a href="project-hellbinder.html" class="details-btn">Read Full Details</a>
-            </div>
-
-            <div class="project-card">
-                <img src="images/DepthFirst_CoverPage.png" alt="Depth First" class="project-cover">
-                <h3>Depth First!</h3>
-                <p>An algorithm-inspired puzzle game. I designed levels that offer multiple distinct solution paths based on search mechanics.</p>
-                <a href="project-depthfirst.html" class="details-btn">Read Full Details</a>
             </div>
 
             <div class="project-card">
                 <img src="images/WhiteRoom_CoverPage.png" alt="White Room" class="project-cover">
                 <h3>White Room</h3>
-                <p>A psychological horror game. I served as the Narrative Designer, creating a meta-narrative experienced through text-adventure sequences.</p>
+                <p>Psychological horror. Replaced jump scares with a meta-narrative and disturbing text-adventure sequences.</p>
                 <a href="project-whiteroom.html" class="details-btn">Read Full Details</a>
             </div>
 
@@ -103,7 +157,6 @@
                 <p>Platformer featuring a unique invisibility mechanic where movement and combat reveal the player.</p>
                 <a href="project-invisible.html" class="details-btn">Read Full Details</a>
             </div>
-
         </div>
     </section>
 
@@ -113,7 +166,7 @@
             <div class="project-card">
                 <img src="images/FateTheCast_CoverPage.png" alt="Fate The Cast" class="project-cover">
                 <h3>Fate The Cast</h3>
-                <p>Lead Combat Designer. Engineered a non-linear mathematical framework and phased combat structure for a custom Fate TTRPG.</p>
+                <p>Lead Combat Designer. Engineered a non-linear mathematical framework and phased combat structure.</p>
                 <a href="project-fate.html" class="details-btn">Read Full Details</a>
             </div>
         </div>
