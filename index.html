@@ -8,7 +8,7 @@
     <style>
         /* 针对精选区域的额外小样式，突出重点 */
         .featured-section {
-            background-color: #f4f7f6; /* 轻微的背景色区分 */
+            background-color: #f4f7f6;
             padding: 80px 0;
             border-bottom: 1px solid #e0e0e0;
         }
@@ -22,11 +22,14 @@
         }
         .featured-card {
             background: white;
-            border: 2px solid var(--accent-color); /* 用主色调边框强调 */
+            border: 2px solid var(--accent-color);
             border-radius: 12px;
             overflow: hidden;
             transition: transform 0.3s ease;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            /* ✨ 新增：开启弹性盒子，强制等高对齐 ✨ */
+            display: flex;
+            flex-direction: column;
         }
         .featured-card:hover {
             transform: translateY(-10px);
@@ -42,6 +45,21 @@
             top: 20px;
             left: 20px;
             border-radius: 4px;
+            z-index: 2;
+        }
+        /* ✨ 新增：内部容器占满剩余空间，把按钮推到底部 ✨ */
+        .featured-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .featured-content p {
+            flex-grow: 1;
+            margin-bottom: 25px;
+        }
+        .featured-content .details-btn {
+            align-self: flex-start; /* 保持按钮原有大小 */
         }
     </style>
 </head>
@@ -78,7 +96,7 @@
             <div class="featured-card" style="position: relative;">
                 <span class="featured-badge">Top Pick</span>
                 <img src="images/ToHeaven_CoverPage.png" alt="Squatter’s Rights to Heaven" class="project-cover">
-                <div style="padding: 25px;">
+                <div class="featured-content">
                     <h3>Squatter’s Rights to Heaven</h3>
                     <p>Strategy Tower Defense. Developed the level design pipeline and implemented the core Main Menu UI logic. Focused on spatial strategy and synergy mechanics.</p>
                     <a href="project-squatter.html" class="details-btn">View Detailed Design</a>
@@ -88,7 +106,7 @@
             <div class="featured-card" style="position: relative;">
                 <span class="featured-badge">System Design</span>
                 <img src="images/HellBinder_CoverPage.png" alt="Hell Binder" class="project-cover">
-                <div style="padding: 25px;">
+                <div class="featured-content">
                     <h3>Hell Binder</h3>
                     <p>TCG appraisal puzzle. Combines "Papers, Please" inspection with deep trading card game mechanics and value-based decision making.</p>
                     <a href="project-hellbinder.html" class="details-btn">View Detailed Design</a>
@@ -98,7 +116,7 @@
             <div class="featured-card" style="position: relative;">
                 <span class="featured-badge">Puzzle Design</span>
                 <img src="images/DepthFirst_CoverPage.png" alt="Depth First" class="project-cover">
-                <div style="padding: 25px;">
+                <div class="featured-content">
                     <h3>Depth First!</h3>
                     <p>Algorithm-inspired puzzle game. Designed levels with multiple solution paths based on search mechanics and recursive logic.</p>
                     <a href="project-depthfirst.html" class="details-btn">View Detailed Design</a>
@@ -191,4 +209,3 @@
 
 </body>
 </html>
- 
