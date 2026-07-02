@@ -220,6 +220,86 @@ footer {
     overflow: hidden; /* 防止任何东西意外溢出白框 */
 }
 
+.project-page-container--wide {
+    max-width: 1100px;
+}
+
+.project-page-container--medium {
+    max-width: 900px;
+}
+
+.project-page-container.project-page-container--medium > h2,
+.project-page-container.project-page-container--medium > p,
+.project-page-container.project-page-container--medium > .project-contributions {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+}
+
+.project-page-container.project-page-container--medium > .project-contributions {
+    margin-bottom: 20px;
+    padding-left: 1.5rem;
+}
+
+/* Wide project pages use a consistent inner grid for text and media. */
+.project-page-container.project-page-container--wide > h2,
+.project-page-container.project-page-container--wide > p,
+.project-page-container.project-page-container--wide > .project-contributions {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+}
+
+.project-page-container.project-page-container--wide > h1,
+.project-page-container.project-page-container--wide > .back-link,
+.project-page-container.project-page-container--wide > .project-cta {
+    width: 100%;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.project-page-container.project-page-container--wide h1,
+.project-page-container.project-page-container--wide h2,
+.project-page-container.project-page-container--wide p,
+.project-page-container.project-page-container--wide .back-link,
+.project-page-container.project-page-container--wide .img-caption,
+.project-page-container.project-page-container--wide .project-cta {
+    text-align: left;
+}
+
+.project-page-container.project-page-container--wide > h1,
+.project-page-container.project-page-container--wide > .project-cta,
+.project-page-container.project-page-container--wide > .project-cta p {
+    text-align: center;
+}
+
+.project-page-container.project-page-container--wide > .project-cta {
+    margin-bottom: 50px;
+}
+
+.project-page-container.project-page-container--wide > .project-contributions {
+    margin-bottom: 30px;
+    padding-left: 1.5rem;
+}
+
+.project-page-container.project-page-container--wide > .showcase-img {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-page-container.project-page-container--wide > .img-caption {
+    max-width: 100%;
+}
+
 /* ================================================== */
 /* ✨ 核心修改点：文字和标题缩窄，留给图片/视频 100% 宽度 ✨ */
 /* ================================================== */
@@ -259,6 +339,29 @@ footer {
     display: flex; /* 让 meta 信息在一行对齐 */
     justify-content: center;
     gap: 40px;
+}
+
+/* Keep longer project details readable without splitting individual fields. */
+.project-meta--compact {
+    flex-wrap: nowrap;
+    gap: 16px;
+    font-size: 0.9rem;
+}
+
+.project-meta--compact p {
+    white-space: nowrap;
+    font-size: inherit;
+}
+
+.project-meta--wide {
+    max-width: 850px;
+    gap: 16px;
+    font-size: 0.9rem;
+    justify-content: flex-start;
+}
+
+.project-meta--medium {
+    max-width: 800px;
 }
 
 .project-page-container h2 {
